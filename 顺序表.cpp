@@ -1,8 +1,8 @@
 /*
-    ½¨Á¢Ò»¸öË³Ğò±í
-    º¯Êı½¨Á¢Ò»¸ö¿Õ±í
-    ÊäÈëÊı¾İ
-    ²åÈë
+    å»ºç«‹ä¸€ä¸ªé¡ºåºè¡¨
+    å‡½æ•°å»ºç«‹ä¸€ä¸ªç©ºè¡¨
+    è¾“å…¥æ•°æ®
+    æ’å…¥
 */
 #include<iostream>
 #include<stdlib.h>
@@ -10,22 +10,22 @@ using namespace std;
 #define MAXSIZE 100
 typedef struct
 {
-    int *elem;  //´æ´¢¿Õ¼äµÄ»ùµØÖ·
-    int length;  //±í³¤
+    int *elem;  //å­˜å‚¨ç©ºé—´çš„åŸºåœ°å€
+    int length;  //è¡¨é•¿
 }SqList;
 void InitList(SqList &L)
 {
-    L.elem=new int[MAXSIZE];//¸øË³Ğò±í·ÖÅäÒ»¸ö´óĞ¡ÎªmaxsizeµÄÊı×é¿Õ¼ä
+    L.elem=new int[MAXSIZE];//ç»™é¡ºåºè¡¨åˆ†é…ä¸€ä¸ªå¤§å°ä¸ºmaxsizeçš„æ•°ç»„ç©ºé—´
     if(!L.elem)
-        exit(0);//ÅĞ¶ÏÊÇ·ñºÏ·¨
+        exit(0);//åˆ¤æ–­æ˜¯å¦åˆæ³•
     L.length=0;
 }
 void Input(SqList &L)
 {
     int n;
-    cout<<"ÇëÊäÈëÏëÊäÈëµÄÊı¾İ¸öÊı:"<<endl;
+    cout<<"è¯·è¾“å…¥æƒ³è¾“å…¥çš„æ•°æ®ä¸ªæ•°:"<<endl;
     cin>>n;
-    cout<<"ÇëÊäÈëÊı¾İ:"<<endl;
+    cout<<"è¯·è¾“å…¥æ•°æ®:"<<endl;
     for(int i=0;i<n;i++)
     {
         cin>>L.elem[i];
@@ -35,7 +35,7 @@ void Input(SqList &L)
 void Insert(SqList &L)
 {
 	int i=0,n;
-	cout<<"ÇëÊäÈë²åÈëµÄÊı¾İ£º"<<endl;
+	cout<<"è¯·è¾“å…¥æ’å…¥çš„æ•°æ®ï¼š"<<endl;
 	cin>>n;
 	while(n>L.elem[i])
 	{
@@ -54,7 +54,7 @@ void Insert(SqList &L)
 void Change(SqList &L)
 {
     int temp,n;
-    cout<<"ÇëÊäÈëÓÒÒÆÊı:";
+    cout<<"è¯·è¾“å…¥å³ç§»æ•°:";
     cin>>n;
     for(int j=0;j<n;j++)
     {
@@ -78,22 +78,22 @@ void Reversal(SqList &L)
 }
 void Output(SqList &L)
 {
-    cout<<"¸Ã±íÄÚÊı¾İÈçÏÂ:"<<endl;
+    cout<<"è¯¥è¡¨å†…æ•°æ®å¦‚ä¸‹:"<<endl;
     for(int i=0;i<L.length;i++)
 		cout<<L.elem[i]<<",";
     cout<<endl;
 }
 int main()
 {
-    cout<<"----------------²Ëµ¥----------------"<<endl;
-    cout<<"-------------1.²åÈë-----------------"<<endl;
-    cout<<"-------------2.ÓÒÒÆ-----------------"<<endl;
-    cout<<"-------------3.µ¹Ğò-----------------"<<endl;
-    cout<<"-------------4.ÍË³ö-----------------"<<endl;
+    cout<<"----------------èœå•----------------"<<endl;
+    cout<<"-------------1.æ’å…¥-----------------"<<endl;
+    cout<<"-------------2.å³ç§»-----------------"<<endl;
+    cout<<"-------------3.å€’åº-----------------"<<endl;
+    cout<<"-------------4.é€€å‡º-----------------"<<endl;
     int a;
     while(1)
     {
-        cout<<"ÇëÊäÈë¹¦ÄÜ:"<<endl;
+        cout<<"è¯·è¾“å…¥åŠŸèƒ½:"<<endl;
         cin>>a;
         switch(a)
         {
